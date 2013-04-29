@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: b2plus_development
+  pool: 5
+  username: sharpei
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: b2plus_test
+  pool: 5
+  username: sharpei
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: b2plus_production
+  pool: 5
+  username: b2plus
+  password:
