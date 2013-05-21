@@ -5,6 +5,8 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'slim-rails'
 gem 'backbone-on-rails'
+gem 'paperclip'
+gem 'aws-sdk'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
