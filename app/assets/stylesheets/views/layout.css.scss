@@ -1,0 +1,80 @@
+body {
+  background: $white;
+
+  .container {
+    width: 1140px;
+    margin: 0 auto;
+  }
+
+  header {
+    border-bottom: 25px solid $red;
+    position: relative;
+
+    &:after {
+      content: '';
+      border-bottom: 25px solid $yellow;
+      position: absolute;
+      width: 50%;
+      right: 0;
+      z-index: 1;
+    }
+
+    .container {
+      @include pie-clearfix;
+
+      h1 {
+        $border-height: 25px;
+        @include float-left;
+        border-bottom: $border-height solid $orange;
+        padding: 35px 0;
+        position: relative;
+        top: $border-height;
+        margin-top: -$border-height;
+        z-index: 2;
+        width: 700px;
+
+        a {
+          background: image-url('logo.png') no-repeat;
+          width: image-width('logo.png');
+          height: image-height('logo.png');
+          display: block;
+          text-indent: -9999px;
+        }
+      }
+
+      nav {
+        @include float-left;
+        margin-top: 55px;
+
+        ul {
+          @include clearfix;
+
+          li {
+            @include float-left;
+            margin-right: 25px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+
+            a {
+              @include helvetica(18px);
+              @include single-transition(color, 0.2s, ease-in-out);
+              color: $orange;
+              text-transform: uppercase;
+              text-decoration: none;
+
+              &:hover {
+                color: darken($orange, 10%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+
+  }
+}
