@@ -1,7 +1,7 @@
 B2plus::Application.routes.draw do
 
   resource :team, except: :show
-  get '/team', to: 'team#index'
+  get '/team', to: 'teams#index'
   get '/admin', to: 'pages#admin'
   resources :pages
 

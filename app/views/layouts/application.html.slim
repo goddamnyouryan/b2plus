@@ -8,11 +8,15 @@ html
 
   body
     header
-      = render partial: 'layouts/branding'
+      .container
+        h1 = link_to 'B2+ - The Broadcast Branded Agency', root_path
+        nav
+          ul
+            li = link_to 'Home', root_path
+            li = link_to 'Work', '#'
+            li = link_to 'Team', team_path
+            li = link_to 'Connect', '#'
 
     #container
       .container
         = yield
-
-    footer
-      = render partial: 'layouts/branding'

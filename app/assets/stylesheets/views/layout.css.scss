@@ -1,4 +1,6 @@
 body {
+  @include helvetica(18px);
+  color: $gray;
   background: $white;
 
   .container {

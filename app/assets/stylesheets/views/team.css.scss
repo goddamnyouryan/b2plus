@@ -1,3 +1,89 @@
-// Place all the styles related to the team controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+ul#team {
+  @include clearfix;
+
+  li {
+    @include float-left;
+    position: relative;
+    width: 314px;
+    height: 375px;
+    overflow: hidden;
+    margin: 0 40px 40px 0;
+
+    img {
+      @include single-transition(opacity, 0.2s, linear);
+
+      &.thumb {
+
+      }
+
+      &.hover {
+        position: absolute;
+        opacity: 0;
+        left: 0;
+      }
+    }
+
+    .meta, .about {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .meta {
+      @include single-transition(max-height, 0.5s, ease-in-out);
+      background: $white;
+      text-align: center;
+      max-height: 100px;
+      padding: 25px 0;
+
+      h2 {
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      h3 {
+
+      }
+    }
+
+    .about {
+      @include single-transition(max-height, 0.5s, ease-in-out, 0.3s);
+      max-height: 0;
+      background: $orange;
+      color: $white;
+      width: 284px;
+      padding: 0 15px;
+
+      .content {
+        margin: 25px 0;
+
+        strong {
+          font-weight: bold;
+        }
+      }
+    }
+
+    &:hover {
+
+      img.thumb {
+        opacity: 0;
+      }
+
+      img.hover {
+        opacity: 1;
+      }
+
+      .meta {
+        max-height: 0;
+      }
+
+      .about {
+        max-height: 300px;
+      }
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}

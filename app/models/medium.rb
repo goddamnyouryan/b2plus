@@ -6,7 +6,7 @@ class Medium < ActiveRecord::Base
 
   belongs_to :team
 
-  has_attached_file :attachment, styles: { team: "314x1000#" },
+  has_attached_file :attachment, styles: { },
                     storage: :s3, s3_credentials: "#{Rails.root}/config/s3.yml",
                     path: ':id/:style.:extension'
 end

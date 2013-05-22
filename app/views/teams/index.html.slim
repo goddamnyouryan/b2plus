@@ -1,2 +1,10 @@
-h1 Team#index
-p Find me in app/views/team/index.html.slim
+ul#team
+  - @teams.each do |team|
+    li
+      = image_tag team.thumb_image, class: 'thumb'
+      = image_tag team.hover_image, class: 'hover'
+      .meta
+        h2 = team.name
+        h3 = team.title
+      .about
+        .content = team.body.html_safe

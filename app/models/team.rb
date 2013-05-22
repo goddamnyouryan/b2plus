@@ -17,11 +17,11 @@ class Team < ActiveRecord::Base
   end
 
   def thumb_image
-    media.where(type: 'thumb').first.attachment(:team)
+    media.where(type: 'thumb').first.attachment
   end
 
   def hover_image
-    media.where(type: 'hover').first.attachment(:team)
+    media.where(type: 'hover').first.attachment
   end
 
   private
