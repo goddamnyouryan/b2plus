@@ -1,3 +1,28 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#intro {
+  @include single-box-shadow($gray, 0, 50px, 50px, -50px);
+  position: relative;
+
+  .container {
+    padding: 100px;
+    width: 900px;
+
+    h1 {
+      font-size: 48px;
+      font-weight: normal;
+      margin-bottom: 30px;
+    }
+
+    p {
+      @include helvetica(22px);
+    }
+
+    .arrow {
+      text-align: center;
+      margin: 50px 0;
+    }
+  }
+}
+
+#animation {
+  text-align: center;
+}
