@@ -1,4 +1,8 @@
 class B2plus.Views.Home extends Backbone.View
+  el: '#container'
+
+  events: ->
+    'click img.animation': 'playVideo'
 
   initialize: ->
     @frame = 2
@@ -33,3 +37,11 @@ class B2plus.Views.Home extends Backbone.View
     @trigger = @distance()
     @limit = @distance()
     @interval = parseInt(($(window).height() / 52).toFixed())
+
+  playVideo: ->
+    if @play
+      sublimevideo.pause('intro-video')
+      @play = false
+    else
+      sublimevideo.play('intro-video')
+      @play = true

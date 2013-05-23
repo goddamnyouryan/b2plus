@@ -6,4 +6,4 @@ class B2plus.Routers.Application extends Backbone.Router
   initialize: ->
 
   index: ->
-    new B2plus.Views.Home el: '#container'
+    new B2plus.Views.Home

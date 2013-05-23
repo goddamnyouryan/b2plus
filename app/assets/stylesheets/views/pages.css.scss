@@ -25,4 +25,24 @@
 
 #animation {
   text-align: center;
+  margin: 25px 0 -600px;
+  height: 200px;
+
+  img {
+    position: relative;
+    z-index: 99;
+  }
+
+  .video {
+    position: relative;
+    width: 630px;
+    top: -629px;
+    left: 9px;
+    margin: 0 auto;
+    z-index: 1;
+
+    .sublimevideo-yl * {
+      display: none;
+    }
+  }
 }
