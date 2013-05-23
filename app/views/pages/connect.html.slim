@@ -1,0 +1,24 @@
+.container
+  .contact
+    p
+      ' 5543 Riverton Ave. Suite 4
+      br
+      ' North Hollywood, CA 91601
+
+    p
+      ' T: 818.985.9500
+      br
+      ' F: 818.985.9501
+
+    p = link_to 'info@B2plus.tv', 'mailto:info@B2plus.tv', class: 'contact-form'
+
+  .stream
+    nav.social-media
+      ul
+        li = link_to 'Facebook', '#', class: 'facebook', target: '_blank'
+        li = link_to 'Instagram', '#', class: 'instagram', target: '_blank'
+        li = link_to 'Twitter', '#', class: 'twitter', target: '_blank'
+        li = link_to 'YouTube', '#', class: 'youtube', target: '_blank'
+    script src='http://d36hc0p18k1aoc.cloudfront.net/public/js/modules/tintembed.js'
+    .tintup data-id='b2plus' data-columns='3' style='height:100%;width:100%;'
+      .tintup-inner
