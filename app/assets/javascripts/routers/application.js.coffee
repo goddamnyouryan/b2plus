@@ -1,8 +1,9 @@
 class B2plus.Routers.Application extends Backbone.Router
 
   routes:
-    'home' : 'index'
+    '' : 'index'
 
   initialize: ->
 
   index: ->
+    new B2plus.Views.Home el: '#container'
