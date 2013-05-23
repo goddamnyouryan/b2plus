@@ -55,6 +55,10 @@
 
   p {
     margin-bottom: 25px;
+
+    &.address {
+      cursor: pointer;
+    }
   }
 }
 
@@ -85,5 +89,31 @@
         }
       }
     }
+  }
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($white, 0.8);
+  padding-top: 200px;
+  display: none;
+
+  .close {
+    height: image-height('close.png');
+    width: image-width('close.png');
+    background: image-url('close.png') no-repeat;
+    display: block;
+    text-indent: -9999px;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+
+  .overlay-content {
+    width: 630px;
+    margin: 0 auto;
   }
 }
