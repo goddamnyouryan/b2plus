@@ -58,5 +58,18 @@ module B2plus
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # mailer shite
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.raise_delivery_errors = true
+    config.action_mailer.smtp_settings = {
+      :address              => 'smtp.mandrillapp.com',
+      :port                 => 587,
+      :domain               => 'b2plus.tv',
+      :user_name            => 'ryan.macinnes@gmail.com',
+      :password             => '7VTnzFToJEDJZPByO9iEIA',
+      :authentication       => 'plain',
+      :enable_starttls_auto => true  }
+    config.action_mailer.default_url_options = { :host => 'b2plus.tv' }
   end
 end

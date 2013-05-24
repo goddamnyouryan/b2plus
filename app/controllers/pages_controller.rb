@@ -9,7 +9,7 @@ class PagesController < ApplicationController
   end
 
   def contact
-    sleep 3
+    UserMailer.contact_form(params).deliver
     render nothing: true
   end
 end
