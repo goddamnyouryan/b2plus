@@ -7,4 +7,9 @@ class PagesController < ApplicationController
 
   def admin
   end
+
+  def contact
+    sleep 3
+    render nothing: true
+  end
 end

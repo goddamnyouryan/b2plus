@@ -8,6 +8,14 @@ body {
     margin: 0 auto;
   }
 
+  .loading {
+    background: image-url('loading.gif') no-repeat;
+    height: image-height('loading.gif');
+    width: image-width('loading.gif');
+    margin: 0 auto;
+    text-align: -9999px;
+  }
+
   #container {
     padding-top: 150px;
   }
