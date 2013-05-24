@@ -115,5 +115,43 @@
   .overlay-content {
     width: 630px;
     margin: 0 auto;
+
+    form {
+      padding: 0;
+      margin: 0;
+
+      .fields {
+
+        input[type=text] {
+          margin: 0;
+          border: 5px solid $gray;
+          font-size: 18px;
+          padding: 8px;
+          width: 291px;
+
+          &:nth-child(2) {
+            margin-left: -5px;
+          }
+        }
+
+        textarea {
+          border: 5px solid $gray;
+          font-size: 18px;
+          margin: -5px 0 0 0;
+          padding: 8px;
+          width: 603px;
+          height: 150px;
+        }
+      }
+
+      input[type=submit] {
+        float: right;
+        font-size: 18px;
+        border: none;
+        background: none;
+        color: $gray;
+        pointer: cursor;
+      }
+    }
   }
 }
