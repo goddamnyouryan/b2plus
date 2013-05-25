@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130525145650) do
+ActiveRecord::Schema.define(:version => 20130525195343) do
 
   create_table "media", :force => true do |t|
     t.string   "attachment_file_name"
@@ -20,8 +20,9 @@ ActiveRecord::Schema.define(:version => 20130525145650) do
     t.datetime "attachment_updated_at"
     t.datetime "created_at",              :null => false
     t.datetime "updated_at",              :null => false
-    t.integer  "team_id"
+    t.integer  "imageable_id"
     t.string   "type"
+    t.string   "imageable_type"
   end
 
   create_table "teams", :force => true do |t|

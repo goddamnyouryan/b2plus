@@ -1,2 +1,10 @@
-h1 Work#index
-p Find me in app/views/work/index.html.slim
+ul#work
+  - @work.each do |work|
+    li
+      .background style=background_image(work.background_image)
+        .middle style=background_image(work.middle_image)
+          .foreground style=background_image(work.foreground_image)
+            section
+              h2 = work.title
+              h3 = work.description
+
