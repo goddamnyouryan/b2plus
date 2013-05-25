@@ -1,4 +1,4 @@
-= form_for @team, url: team_path do |f|
+= form_for @team, url: path, html: { multipart: true } do |f|
 
   p
     = f.label :name
@@ -14,5 +14,15 @@
     = f.label :body
     br
     = f.text_area :body
+
+  p
+    = f.label :thumb
+    br
+    = f.file_field :thumb
+
+  p
+    = f.label :hover
+    br
+    = f.file_field :hover
 
   p = f.submit

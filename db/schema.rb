@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130521160417) do
+ActiveRecord::Schema.define(:version => 20130525145650) do
 
   create_table "media", :force => true do |t|
     t.string   "attachment_file_name"
@@ -31,6 +31,16 @@ ActiveRecord::Schema.define(:version => 20130521160417) do
     t.datetime "updated_at",                :null => false
     t.string   "title"
     t.integer  "order",      :default => 0, :null => false
+  end
+
+  create_table "works", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "order"
+    t.string   "mp4"
+    t.string   "ogg"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end

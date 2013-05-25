@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  order: 1
+  mp4: MyString
+  ogg: MyString
+
+two:
+  title: MyString
+  description: MyText
+  order: 1
+  mp4: MyString
+  ogg: MyString

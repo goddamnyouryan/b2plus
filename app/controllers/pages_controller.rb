@@ -6,6 +6,8 @@ class PagesController < ApplicationController
   end
 
   def admin
+    @work = Work.all
+    @team = Team.all
   end
 
   def contact

@@ -2,4 +2,20 @@ h2 Admin Section
 nav
   ul
     li = link_to 'New Team Member', new_team_path
-    li = link_to 'New Work', '#'
+    li = link_to 'New Work', new_work_path
+
+h2 Work
+ul
+  - @work.each do |work|
+    li
+      =' work.title
+      =' link_to 'Edit', edit_work_path(work)
+      = link_to 'Delete', work, method: :delete, confirm: 'Are you sure you want to delete this?'
+
+h2 Team
+ul
+  - @team.each do |member|
+    li
+      =' member.name
+      =' link_to 'Edit', edit_team_path(member)
+      = link_to 'Delete', member, method: :delete, confirm: 'Are you sure you want to delete this person from the team page?'
