@@ -8,6 +8,7 @@ gem 'backbone-on-rails'
 gem 'paperclip'
 gem 'aws-sdk'
 gem 'skim'
+gem 'skrollr-rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

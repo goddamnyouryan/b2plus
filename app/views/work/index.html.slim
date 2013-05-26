@@ -1,10 +1,11 @@
+h1.scroll Scroll down
 ul#work
   - @work.each do |work|
     li
-      .background style=background_image(work.background_image)
-        .middle style=background_image(work.middle_image)
-          .foreground style=background_image(work.foreground_image)
-            section
+      .background.skrollable style=background_image(work.background_image) data-500-top='top: 0px;' data-bottom='top: 300px;'
+        .middle style=background_image(work.middle_image) data-top='top: -100px;' data-bottom='top: 0px;
+          .foreground style=background_image(work.foreground_image) data-top='top: -100px;' data-bottom='top: 0px;'
+            //section
               h2 = work.title
               h3 = work.description
 

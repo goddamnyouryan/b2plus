@@ -1,10 +1,18 @@
+h1.scroll {
+  margin: 200px 0;
+  text-align: center;
+}
+
 ul#work {
 
   li {
-    height: 1080px;
+    height: 1025px;
+    overflow: hidden;
 
     .background, .middle, .foreground {
-      height: 1080px;
+      height: 1024px;
+      width: 100%;
+      position: relative;
     }
   }
 }

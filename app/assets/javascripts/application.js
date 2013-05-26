@@ -1,6 +1,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require waypoints.min
+//= require skrollr
+//= require skrollr.ie
 //= require underscore
 //= require backbone
 //= require b2plus
