@@ -1,7 +1,7 @@
 class Team < ActiveRecord::Base
-  attr_accessible :body, :name, :order, :thumb, :hover
+  attr_accessible :body, :name, :order, :thumb, :hover, :title
 
-  attr_accessor :hover
+  attr_accessor :thumb, :hover
 
   has_many :media, as: :imageable
 
@@ -36,7 +36,6 @@ class Team < ActiveRecord::Base
 
   def find_or_create_medium(type, file)
     medium = Medium.find_or_create_by_imageable_id_and_imageable_type_and_type(self.id, 'Team', type)
-    medium = Medium.find_or_create_by_team_id_and_type(self.id, type)
     medium.attachment = file
     medium.save
   end
