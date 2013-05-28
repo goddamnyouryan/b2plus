@@ -6,7 +6,7 @@ ul#work
         .middle style=background_image(work.middle_image) data-top='top: 0px;' data-bottom='top: -50px;
           .foreground style=background_image(work.foreground_image) data-top='top: 25px;' data-bottom='top: -25px;'
             section data-top='top: 200px' data-bottom='top: 400px;'
-              = image_tag work.thumb_image
+              img.thumb src="#{work.thumb_image}" data-mp4="#{work.mp4}" data-ogg="#{work.ogg}" data-thumb="#{work.thumb_image}"
               .data
                 h2 = work.title
                 h3 = work.description
