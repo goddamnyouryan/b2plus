@@ -14,5 +14,34 @@ ul#work {
       width: 100%;
       position: relative;
     }
+
+    section {
+      @include clearfix;
+      background: rgba($white, 0.8);
+      width: 100%;
+      padding: 25px 50px;
+      position: relative;
+
+      img {
+        @include float-left;
+        margin-right: 25px;
+        border: 2px solid $gray;
+      }
+
+      .data {
+        @include float-left;
+
+        h2 {
+          font-size: 48px;
+          color: $gray;
+          margin: 15px 0;
+        }
+
+        h3 {
+          font-size: 18px;
+          color: $gray;
+        }
+      }
+    }
   }
 }

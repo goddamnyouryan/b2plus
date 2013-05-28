@@ -24,7 +24,7 @@ class Work < ActiveRecord::Base
   end
 
   def thumb?
-    self.foreground.present?
+    self.thumb.present?
   end
 
   def background_image
@@ -43,6 +43,13 @@ class Work < ActiveRecord::Base
 
   def foreground_image
     medium = media.where(type: 'foreground')
+    if medium.present?
+      medium.first.attachment
+    end
+  end
+
+  def thumb_image
+    medium = media.where(type: 'thumb')
     if medium.present?
       medium.first.attachment
     end
