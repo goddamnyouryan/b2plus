@@ -9,6 +9,7 @@ gem 'paperclip'
 gem 'aws-sdk'
 gem 'skim'
 gem 'skrollr-rails'
+gem 'compass'
 gem 'compass-rails'
 
 group :assets do
