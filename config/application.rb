@@ -71,5 +71,8 @@ module B2plus
       :authentication       => 'plain',
       :enable_starttls_auto => true  }
     config.action_mailer.default_url_options = { :host => 'b2plus.tv' }
+
+    # make goddamned heroku work
+    config.assets.initialize_on_precompile = false
   end
 end
