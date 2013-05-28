@@ -1,4 +1,3 @@
-a.close Close
 form.contact action='/contact' method='post'
   .fields
     input#name type='text' name='name' placeholder='Your Name'

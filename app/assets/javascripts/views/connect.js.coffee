@@ -7,25 +7,20 @@ class B2plus.Views.Connect extends Backbone.View
   events: ->
     'click .address': 'openMap'
     'click .contact-form': 'openEmail'
-    'click .close': 'hideOverlay'
     'submit .contact': 'sendContactEmail'
 
   openMap: ->
-    @openOverlay()
-    @$el.find('.overlay-content').html @map()
+    overlay = new B2plus.Views.Overlay
+      content: @map()
+      el: @el
+    overlay.render()
 
   openEmail: (event) ->
     event.preventDefault()
-    @openOverlay()
-    @$el.find('.overlay-content').html @form()
-
-  openOverlay: ->
-    @$el.find('.overlay').show()
-
-  hideOverlay: ->
-    overlay = @$el.find('.overlay')
-    overlay.hide()
-    overlay.find('.overlay-content').html ''
+    @overlay = new B2plus.Views.Overlay
+      content: @form()
+      el: @el
+    @overlay.render()
 
   sendContactEmail: (event) ->
     event.preventDefault()
@@ -47,6 +42,6 @@ class B2plus.Views.Connect extends Backbone.View
       url: target.attr('action')
       data: params
       success: =>
-        @hideOverlay()
+        @$el.find('.overlay').remove()
         html = '<div class="flash">Your Message has been sent! We\'ll get back to you shortly.</div>'
         @$el.prepend html

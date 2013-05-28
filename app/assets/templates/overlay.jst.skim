@@ -1,0 +1,4 @@
+.overlay
+  .overlay-content
+    a.close href='#' Close
+    == @content
