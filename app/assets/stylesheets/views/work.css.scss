@@ -5,14 +5,12 @@ h1.scroll {
 ul#work {
 
   li {
-    height: 1025px;
+    height: 800px;
     overflow: hidden;
-
-    .background, .middle, .foreground {
-      height: 1024px;
-      width: 100%;
-      position: relative;
-    }
+    width: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
 
     section {
       @include clearfix;

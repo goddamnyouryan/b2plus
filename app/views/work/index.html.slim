@@ -1,13 +1,10 @@
 h1.scroll = link_to 'Scroll Down', '#work', class: 'scroll'
 ul#work
   - @work.each do |work|
-    li
-      .background.skrollable style=background_image(work.background_image) data-136-top='top: 0px;' data-bottom='top: 300px;'
-        .middle style=background_image(work.middle_image) data-top='top: 0px;' data-bottom='top: -50px;
-          .foreground style=background_image(work.foreground_image) data-top='top: 25px;' data-bottom='top: -25px;'
-            section data-top='top: 200px' data-bottom='top: 400px;'
-              img.thumb src="#{work.thumb_image}" data-mp4="#{work.mp4}" data-ogg="#{work.ogg}" data-thumb="#{work.thumb_image}"
-              .data
-                h2 = work.title
-                h3 = work.description
+    li style=background_images(work) data-136-top='background-position: 0px 300px, 0px 200px, 0px 30px;' data-bottom='background-position: 0px 0px, 0px 0px, 0px 0px;'
+      section data-top='top: 200px' data-bottom='top: 400px;'
+        img.thumb src="#{work.thumb_image}" data-mp4="#{work.mp4}" data-ogg="#{work.ogg}" data-thumb="#{work.thumb_image}"
+        .data
+          h2 = work.title
+          h3 = work.description
 
