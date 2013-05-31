@@ -1,5 +1,5 @@
 class Work < ActiveRecord::Base
-  attr_accessible :description, :mp4, :ogg, :order, :title,
+  attr_accessible :description, :mp4, :ogg, :position, :title,
                   :background, :middle, :foreground, :thumb
 
   attr_accessor :background, :middle, :foreground, :thumb
