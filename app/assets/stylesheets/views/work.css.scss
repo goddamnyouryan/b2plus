@@ -43,5 +43,24 @@ ul#work {
         }
       }
     }
+
+    &:first-child {
+
+      &:before {
+        @include single-box-shadow($gray, 0, 10px, 75px, 20px);
+        content: '';
+        width: 100%;
+        left: 0;
+        position: absolute;
+        height: 30px;
+      }
+
+      &.noshadow {
+        &:before {
+          @include single-box-shadow($white, 0, 0, 0, 0);
+          content: '';
+        }
+      }
+    }
   }
 }

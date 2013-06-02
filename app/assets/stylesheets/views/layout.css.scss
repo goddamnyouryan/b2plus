@@ -103,4 +103,12 @@ body {
   footer {
 
   }
+
+  .shadow {
+    @include single-box-shadow($gray, 0, 10px, 75px, 20px);
+    width: 100%;
+    position: fixed;
+    top: 126px;
+    z-index: 1;
+  }
 }
