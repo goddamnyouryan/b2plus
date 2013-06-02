@@ -5,6 +5,6 @@ class UserMailer < ActionMailer::Base
   def contact_form(params)
     ['action', 'controller', 'utf8', 'authenticity_token', 'commit'].each { |param| params.delete param }
     @params = params
-    mail(to: 'ryan.macinnes@gmail.com', subject: 'B2Plus Contact Form')
+    mail(to: 'info@b2plus.tv', subject: 'B2Plus Contact Form')
   end
 end
