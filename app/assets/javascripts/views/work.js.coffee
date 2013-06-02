@@ -21,7 +21,7 @@ class B2plus.Views.Work extends Backbone.View
         $(this).removeClass 'noshadow'
         $('.shadow').remove()
     ,
-    offset: 110
+    offset: 126
 
 
   playVideoInOverlay: (event) ->
