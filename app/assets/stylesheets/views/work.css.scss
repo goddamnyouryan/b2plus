@@ -28,9 +28,11 @@ ul#work {
 
       .data {
         @include float-left;
+        max-width: 940px;
 
         h2 {
           font-size: 48px;
+          line-height: 48px;
           color: $gray;
           margin: 15px 0;
         }
