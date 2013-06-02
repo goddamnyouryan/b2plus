@@ -2,7 +2,7 @@ h1.scroll = link_to 'Scroll Down', '#work', class: 'scroll'
 ul#work
   - @work.each do |work|
     li style=background_images(work) data-136-top='background-position: 0px 300px, 0px 200px, 0px 30px;' data-bottom='background-position: 0px 0px, 0px 0px, 0px 0px;'
-      section data-top='top: 200px' data-bottom='top: 400px;'
+      section data-top='top: 300px;' data-bottom='top: 400px;'
         img.thumb src="#{work.thumb_image}" data-mp4="#{work.mp4}" data-ogg="#{work.ogg}" data-thumb="#{work.thumb_image}"
         .data
           h2 = work.title
