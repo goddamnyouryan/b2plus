@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def index
+    @home = Home.first
   end
 
   def connect
@@ -8,6 +9,7 @@ class PagesController < ApplicationController
   def admin
     @work = Work.all
     @team = Team.all
+    @home = Home.first
   end
 
   def contact

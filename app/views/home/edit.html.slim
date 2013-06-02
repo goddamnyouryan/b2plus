@@ -1,0 +1,30 @@
+h1 Edit Homepage
+
+= form_for @home do |f|
+
+  p
+    = f.label :title
+    br
+    = f.text_field :title
+
+  p
+    = f.label :intro
+    br
+    = f.text_area :intro
+
+  p
+    = f.label :mp4
+    br
+    = f.text_field :mp4
+
+  p
+    = f.label :ogg
+    br
+    = f.text_field :ogg
+
+  p
+    = f.label :poster
+    br
+    = f.text_field :poster
+
+  p = f.submit

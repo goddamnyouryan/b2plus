@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130531054917) do
+ActiveRecord::Schema.define(:version => 20130602205518) do
+
+  create_table "homes", :force => true do |t|
+    t.text     "intro"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "mp4"
+    t.string   "ogg"
+    t.string   "poster"
+    t.string   "title"
+  end
 
   create_table "media", :force => true do |t|
     t.string   "attachment_file_name"
