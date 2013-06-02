@@ -61,7 +61,7 @@
 .contact {
   @include float-left;
   color: $orange;
-  padding-top: 130px;
+  padding-top: 50px;
   margin-right: 50px;
 
   p {
@@ -76,31 +76,6 @@
 .stream {
   @include float-left;
   width: 860px;
-
-  nav.social-media {
-    margin: 50px 0 25px 10px;
-
-    ul {
-      @include clearfix;
-
-      li {
-        @include float-left;
-        margin-right: 10px;
-
-        a {
-          width: image-width('twitter.png');
-          height: image-height('twitter.png');
-          display: block;
-          text-indent: -9999px;
-
-          &.facebook { background: image-url('facebook.png') no-repeat; }
-          &.instagram { background: image-url('instagram.png') no-repeat; }
-          &.twitter { background: image-url('twitter.png') no-repeat; }
-          &.youtube { background: image-url('youtube.png') no-repeat; }
-        }
-      }
-    }
-  }
 }
 
 .overlay {
