@@ -24,19 +24,23 @@
 }
 
 #animation {
+  position: relative;
   text-align: center;
   margin: 25px 0 -600px;
   height: 200px;
 
   img {
-    position: relative;
+    position: absolute;
+    left: 50%;
+    margin-left: -626px;
     z-index: 99;
+    padding-bottom: 100px;
   }
 
   .video {
     position: relative;
     width: 630px;
-    top: -629px;
+    top: 288px;
     left: 9px;
     margin: 0 auto;
     z-index: 1;
