@@ -35,8 +35,8 @@ class B2plus.Views.Home extends Backbone.View
 
   setVariables: ->
     @trigger = @distance()
-    @limit = @distance()
-    @interval = parseInt(($(window).height() / 52).toFixed())
+    @limit = @distance() + 100
+    @interval = parseInt(($(window).height() / @maxFrames).toFixed())
 
   playVideo: ->
     if @play
