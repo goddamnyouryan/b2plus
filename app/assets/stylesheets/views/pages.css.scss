@@ -1,5 +1,4 @@
 #intro {
-  @include single-box-shadow($gray, 0, 50px, 50px, -50px);
   position: relative;
 
   .container {
@@ -15,6 +14,7 @@
 
     p {
       @include helvetica(22px);
+      text-align: justify;
     }
 
     .arrow {
@@ -61,6 +61,10 @@
     font-weight: bold;
     padding: 10px;
   }
+
+  p.address, a {
+    @include link;
+  }
 }
 
 .contact {
@@ -75,12 +79,17 @@
     &.address {
       cursor: pointer;
     }
+
+    &.follow {
+      margin-bottom: 0;
+    }
   }
 }
 
 .stream {
   @include float-left;
   width: 860px;
+  margin-top: 50px;
 }
 
 .overlay {
@@ -91,6 +100,7 @@
   height: 100%;
   background: rgba($white, 0.9);
   padding-top: 200px;
+  z-index: 9999;
 
   .close {
     height: image-height('close.png');

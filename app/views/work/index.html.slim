@@ -3,9 +3,10 @@ ul#work
   - @work.each do |work|
     li style=background_images(work) data-136-top='background-position: 0px 200px, 0px 100px, 0px 0px;' data-bottom='background-position: 0px 0px, 0px 0px, 0px 0px;'
       section data-top='top: 350px;' data-bottom='top: 400px;'
-        img.thumb src="#{work.thumb_image}" data-mp4="#{work.mp4}" data-ogg="#{work.ogg}" data-thumb="#{work.thumb_image}"
-        .data
-          h2 = work.title
-          h3 = work.description
+        .width
+          img.thumb src="#{work.thumb_image}" data-mp4="#{work.mp4}" data-ogg="#{work.ogg}" data-thumb="#{work.thumb_image}"
+          .data
+            h2 = work.title
+            h3 = work.description
     .color-bar
       .container

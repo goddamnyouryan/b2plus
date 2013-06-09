@@ -1,0 +1,10 @@
+@mixin link {
+  @include helvetica(18px);
+  @include single-transition(color, 0.2s, ease-in-out);
+  color: $orange;
+  text-decoration: none;
+
+  &:hover {
+    color: $red;
+  }
+}

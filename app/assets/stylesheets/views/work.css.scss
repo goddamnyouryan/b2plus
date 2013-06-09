@@ -19,6 +19,11 @@ ul#work {
       padding: 25px 50px;
       position: relative;
 
+      .width {
+        width: 1240px;
+        margin: 0 auto;
+      }
+
       img {
         @include float-left;
         margin-right: 25px;
@@ -28,18 +33,20 @@ ul#work {
 
       .data {
         @include float-left;
-        max-width: 940px;
+        max-width: 900px;
 
         h2 {
           font-size: 48px;
           line-height: 48px;
           color: $gray;
           margin: 15px 0;
+          text-align: justify;
         }
 
         h3 {
           font-size: 18px;
           color: $gray;
+          text-align: justify;
         }
       }
     }

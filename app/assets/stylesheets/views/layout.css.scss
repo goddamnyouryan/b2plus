@@ -75,15 +75,8 @@ body {
             }
 
             a {
-              @include helvetica(18px);
-              @include single-transition(color, 0.2s, ease-in-out);
-              color: $orange;
+              @include link;
               text-transform: uppercase;
-              text-decoration: none;
-
-              &:hover {
-                color: darken($orange, 10%);
-              }
             }
           }
         }
