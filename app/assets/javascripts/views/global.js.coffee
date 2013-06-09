@@ -8,5 +8,5 @@ class B2plus.Views.Global extends Backbone.View
     event.preventDefault()
     target = $(event.target)
     hash = target.attr('href')
-    scrollTarget = $("#{hash}").offset().top
+    scrollTarget = $("#{hash}").offset().top - 136
     $('html,body').animate({scrollTop: scrollTarget},{easing: 'linear', duration: 1000})

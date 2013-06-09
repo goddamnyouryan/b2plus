@@ -2,8 +2,8 @@ class B2plus.Routers.Application extends Backbone.Router
 
   routes:
     '' : 'index'
-    'connect': 'connect'
-    'work': 'work'
+    '': 'connect'
+    '': 'work'
 
   initialize: ->
     new B2plus.Views.Global

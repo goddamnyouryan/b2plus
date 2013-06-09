@@ -1,10 +1,6 @@
 class WorkController < ApplicationController
   before_filter :find_work, only: [:edit, :update, :destroy]
 
-  def index
-    @work = Work.order('position asc')
-  end
-
   def new
     @work = Work.new
   end

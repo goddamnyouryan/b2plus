@@ -13,10 +13,10 @@ html
         h1 = link_to 'B2+ - The Broadcast Branded Agency', root_path
         nav
           ul
-            li = link_to 'Home', root_path
-            li = link_to 'Work', work_index_path
-            li = link_to 'Team', team_index_path
-            li = link_to 'Connect', connect_path
+            li = link_to 'Home', '#intro', class: 'scroll'
+            li = link_to 'Work', '#work', class: 'scroll'
+            li = link_to 'Team', '#team', class: 'scroll'
+            li = link_to 'Connect', '#connect', class: 'scroll'
 
     #container
       = yield

@@ -1,9 +1,8 @@
 class PagesController < ApplicationController
   def index
     @home = Home.first
-  end
-
-  def connect
+    @work = Work.order('position asc')
+    @teams = Team.all
   end
 
   def admin
