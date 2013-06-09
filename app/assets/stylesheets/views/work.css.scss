@@ -5,7 +5,7 @@ h1.scroll {
 ul#work {
 
   li {
-    height: 800px;
+    height: 700px;
     overflow: hidden;
     width: 100%;
     position: relative;
@@ -17,6 +17,7 @@ ul#work {
       background: rgba($white, 0.8);
       width: 100%;
       padding: 25px 50px;
+      margin-top: 200px;
       position: relative;
 
       .width {
