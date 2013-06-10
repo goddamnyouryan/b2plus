@@ -99,6 +99,12 @@
   @include float-left;
   width: 860px;
   margin-top: 50px;
+
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    margin: 25px 0;
+  }
 }
 
 .overlay {
