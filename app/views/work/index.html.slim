@@ -1,4 +1,4 @@
-h1.scroll = link_to 'Scroll Down', '#work', class: 'scroll'
+h1.arrow = link_to 'Scroll Down', '#work', class: 'scroll'
 ul#work
   - @work.each do |work|
     li style="background: url('#{work.background_image}') no-repeat" data-400-top='background-position: 0px 0px' data-bottom='background-position: 0px -100px'
