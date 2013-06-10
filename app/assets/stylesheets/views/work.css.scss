@@ -51,7 +51,7 @@ ul#work {
     &:first-child {
 
       &:before {
-        @include single-box-shadow($gray, 0, 10px, 75px, 20px);
+        @include single-box-shadow(black, 0, 10px, 75px, 20px);
         content: '';
         width: 100%;
         left: 0;
