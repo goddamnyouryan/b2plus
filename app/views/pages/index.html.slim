@@ -15,7 +15,7 @@
 
 ul#work
   - @work.each do |work|
-    li style="background: url('#{work.background_image}') no-repeat" data-400-top='background-position: 0px 0px' data-bottom='background-position: 0px -100px'
+    li data-background="#{work.background_image}" data-400-top='background-position: 0px 0px' data-bottom='background-position: 0px -100px'
       section
         .width
           img.thumb src="#{work.thumb_image}" data-mp4="#{work.mp4}" data-ogg="#{work.ogg}" data-thumb="#{work.thumb_image}"
@@ -24,6 +24,8 @@ ul#work
             h3 = work.description
     .color-bar
       .container
+
+.arrow = link_to 'Scroll Down', '#team', class: 'scroll'
 
 .container
   ul#team
@@ -36,6 +38,8 @@ ul#work
           h3 = team.title
         .about
           .content = team.body.html_safe
+
+.arrow = link_to 'Scroll Down', '#connect', class: 'scroll'
 
 #connect
   .container
@@ -61,6 +65,5 @@ ul#work
       script type='text/javascript' src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51a8d7ad01bacb80'
 
     .stream
-      script src='http://d36hc0p18k1aoc.cloudfront.net/public/js/modules/tintembed.js'
       .tintup data-id='b2plus' data-columns='3' style='height:100%;width:100%;'
         .tintup-inner

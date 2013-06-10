@@ -4,10 +4,19 @@ class B2plus.Views.Connect extends Backbone.View
   map: JST['map']
   form: JST['contact_form']
 
+  initialize: ->
+    @lazyLoadTint()
+
   events: ->
     'click .address': 'openMap'
     'click .contact-form': 'openEmail'
     'submit .contact': 'sendContactEmail'
+
+  lazyLoadTint: ->
+    $('#connect').waypoint ->
+      $.getScript('http://d36hc0p18k1aoc.cloudfront.net/public/js/modules/tintembed.js')
+    ,
+      offset: $.waypoints('viewportHeight')
 
   openMap: ->
     overlay = new B2plus.Views.Overlay
