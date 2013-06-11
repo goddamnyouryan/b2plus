@@ -1,5 +1,5 @@
 class B2plus.Views.Connect extends Backbone.View
-  el: '.connect'
+  el: '#connect'
 
   map: JST['map']
   form: JST['contact_form']
