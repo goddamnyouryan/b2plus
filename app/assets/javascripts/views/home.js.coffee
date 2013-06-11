@@ -4,17 +4,6 @@ class B2plus.Views.Home extends Backbone.View
   initialize: ->
     @lazyLoadImages()
 
-  events: ->
-    'click img.animation': 'playVideo'
-
-  playVideo: ->
-    if @play
-      sublimevideo.pause('intro-video')
-      @play = false
-    else
-      sublimevideo.play('intro-video')
-      @play = true
-
   lazyLoadImages: ->
     $('ul#work li').waypoint ->
       if $(this).css('background-image') == 'none'

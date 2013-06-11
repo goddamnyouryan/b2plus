@@ -3,13 +3,10 @@
     h1 = @home.title
     p = @home.intro
 
-#animation
-  = image_tag "/images/intro-animation.gif?#{Time.now.to_i}", class: 'animation'
-
-  .video#video
-    video class='sublime' title='Intro Video' width='415' height='233' poster="#{@home.poster}" preload='none' id='intro-video' data-controls-enable='false'
-      source src="#{@home.mp4}"
-      source src="#{@home.ogg}"
+.video#video
+  video class='sublime' title='Intro Video' width='900' height='484' poster="#{@home.poster}" preload='none' id='intro-video' data-controls-enable='false'
+    source src="#{@home.mp4}"
+    source src="#{@home.ogg}"
 
 .arrow = link_to 'Scroll Down', '#work', class: 'scroll'
 
@@ -66,5 +63,5 @@ ul#work
 
     .stream
       h2 Tag your content with #b2plus and it will show up in this stream!
-      .tintup data-id='b2plus' data-columns='3' style='height:100%;width:100%;'
+      .tintup data-id='b2plus' data-columns='3' style='height:800px;width:100%;'
         .tintup-inner

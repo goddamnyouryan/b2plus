@@ -20,30 +20,14 @@
   }
 }
 
-#animation {
-  position: relative;
-  text-align: center;
-  margin: 25px 0 0;
-  height: 553px;
 
-  img {
-    position: absolute;
-    left: 50%;
-    margin-left: -413px;
-    z-index: 99;
-  }
+.video {
+  width: 900px;
+  margin: 50px auto;
+  z-index: 1;
 
-  .video {
-    position: relative;
-    width: 415px;
-    top: 191px;
-    left: 5px;
-    margin: 0 auto;
-    z-index: 1;
-
-    .sublimevideo-yl *, .sublimevideo-Dk * {
-      display: none;
-    }
+  .sublimevideo-yl *, .sublimevideo-Dk * {
+    display: none;
   }
 }
 
