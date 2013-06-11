@@ -11,6 +11,8 @@
 .arrow = link_to 'Scroll Down', '#work', class: 'scroll'
 
 ul#work
+  .color-bar
+    .container
   - @work.each do |work|
     li data-background="#{work.background_image}"
       section

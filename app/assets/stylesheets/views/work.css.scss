@@ -29,7 +29,7 @@ ul#work {
 
       .data {
         @include float-left;
-        max-width: 900px;
+        max-width: 800px;
 
         h2 {
           font-size: 48px;
@@ -43,26 +43,6 @@ ul#work {
           font-size: 18px;
           color: $gray;
           text-align: justify;
-        }
-      }
-    }
-
-    &:first-child {
-
-      &:before {
-        @include single-box-shadow(black, 0, 10px, 75px, 20px);
-        content: '';
-        width: 100%;
-        left: 0;
-        position: absolute;
-        height: 30px;
-        top: -30px;
-      }
-
-      &.noshadow {
-        &:before {
-          @include single-box-shadow($white, 0, 0, 0, 0);
-          content: '';
         }
       }
     }

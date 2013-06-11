@@ -7,22 +7,9 @@ class B2plus.Views.Work extends Backbone.View
     sublime.load()
     skrollr.init
       smoothScrolling: true
-    @waypoints()
 
   events: ->
     'click img.thumb': 'playVideoInOverlay'
-
-  waypoints: ->
-    @$el.find('li').first().waypoint (direction) ->
-      if direction == 'down'
-        $(this).addClass 'noshadow'
-        $('header').after '<div class="shadow"></div>'
-      else
-        $(this).removeClass 'noshadow'
-        $('.shadow').remove()
-    ,
-    offset: 126
-
 
   playVideoInOverlay: (event) ->
     target = $(event.target)
