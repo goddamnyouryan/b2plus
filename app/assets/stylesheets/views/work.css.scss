@@ -9,7 +9,7 @@ ul#work {
 
     section {
       @include clearfix;
-      background: rgba($white, 0.8);
+      background: rgba($white, 0.75);
       width: 100%;
       padding: 25px 50px;
       margin-top: 200px;
@@ -18,6 +18,18 @@ ul#work {
       .width {
         width: 1240px;
         margin: 0 auto;
+        position: relative;
+
+        &:before {
+          $image: 'play.png';
+          content: image-url($image);
+          width: image-width($image);
+          height: image-height($image);
+          position: absolute;
+          left: 107px;
+          top: 51px;
+          cursor: pointer;
+        }
       }
 
       img {

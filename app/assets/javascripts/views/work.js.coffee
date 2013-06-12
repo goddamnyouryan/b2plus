@@ -10,6 +10,7 @@ class B2plus.Views.Work extends Backbone.View
 
   events: ->
     'click img.thumb': 'playVideoInOverlay'
+    'click .width': 'triggerOverlay'
 
   playVideoInOverlay: (event) ->
     target = $(event.target)
@@ -24,3 +25,6 @@ class B2plus.Views.Work extends Backbone.View
     sublimevideo.prepareAndPlay('sublime-video')
     sublime.player('sublime-video').on 'end', =>
       @$el.find('.overlay').remove()
+
+  triggerOverlay: (event) ->
+    $(event.target).find('img.thumb').click()
