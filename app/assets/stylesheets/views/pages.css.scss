@@ -99,7 +99,7 @@
   width: 100%;
   height: 100%;
   background: rgba($white, 0.9);
-  padding-top: 200px;
+  padding-top: 100px;
   z-index: 9999;
 
   .close {
@@ -117,7 +117,7 @@
   }
 
   .overlay-content {
-    width: 630px;
+    width: 900px;
     margin: 0 auto;
 
     form {
@@ -131,7 +131,7 @@
           border: 5px solid $gray;
           font-size: 18px;
           padding: 8px;
-          width: 291px;
+          width: 424px;
         }
 
         input[type=email] {
@@ -143,8 +143,8 @@
           font-size: 18px;
           margin: -5px 0 -5px 0;
           padding: 8px;
-          width: 603px;
-          height: 150px;
+          width: 869px;
+          height: 250px;
         }
       }
 

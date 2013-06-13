@@ -1,4 +1,4 @@
 .video
-  video class='sublime' title='Video' width='629' height='353' poster="#{@thumb}" preload='none' id='sublime-video'
+  video class='sublime' title='Video' width='900' height='506' poster="#{@thumb}" preload='none' id='sublime-video'
     source src="#{@mp4}"
     source src="#{@ogg}"
