@@ -22,11 +22,22 @@
 
 
 .video#video {
+  position: relative;
   width: 900px;
   margin: 50px auto;
   z-index: 1;
 
-  .sublimevideo-yl *, .sublimevideo-Dk * {
+  .intro-play-button {
+    position: absolute;
+    z-index: 1;
+    width: 900px;
+    height: 506px;
+    background: image-url('play.png') no-repeat 400px 208px;
+    text-indent: -9999px;
+    cursor: pointer;
+  }
+
+  .sublimevideo-yl *, .sublimevideo-Dk *, svg {
     display: none;
   }
 }
