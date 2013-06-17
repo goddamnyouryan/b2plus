@@ -26,8 +26,7 @@ class B2plus.Views.Work extends Backbone.View
     if $(window).width() < 1000
       width = $(window).width() - 50
       height = width / 1.78
-      sublime.ready ->
-        sublimevideo.resize('sublime-video', width, height)
+      sublimevideo.resize('sublime-video', width, height)
     sublime.player('sublime-video').on 'end', =>
       @$el.find('.overlay').remove()
 
