@@ -2,6 +2,7 @@ class B2plus.Routers.Application extends Backbone.Router
 
   routes:
     '' : 'index'
+    'intro': 'index'
 
   initialize: ->
     new B2plus.Views.Global
