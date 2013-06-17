@@ -4,9 +4,14 @@ class B2plus.Views.Global extends Backbone.View
   initialize: ->
     @makeSublimeFluid() if $(window).width() < 1000
     @resizeSublime() if $(window).width() < 1000
+    @redirectForMobile()
 
   events: ->
     'click .scroll': 'smoothScroll'
+
+  redirectForMobile: ->
+    if $(window).width() < 1000
+      window.location.hash = 'intro'
 
   smoothScroll: (event) ->
     event.preventDefault()
