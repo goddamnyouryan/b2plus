@@ -37,8 +37,11 @@
     cursor: pointer;
   }
 
-  .sublimevideo-yl *, .sublimevideo-Dk *, svg {
-    display: none;
+  .sublimevideo-VideoView {
+    background: $white !important;
+  }
+
+  #intro-video {
   }
 }
 
