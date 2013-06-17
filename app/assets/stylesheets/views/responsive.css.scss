@@ -46,6 +46,31 @@
       padding: 0;
     }
 
+    .video#video {
+      width: auto;
+    }
+
+    .overlay .overlay-content {
+      width: 90%;
+      overflow: hidden;
+
+      form .fields {
+
+        input[type=text], input[type=email], textarea {
+          width: 90%%;
+        }
+
+        input[type=email] {
+          margin-left: 0;
+          margin-top: -5px;
+        }
+
+        textarea {
+          height: 100px;
+        }
+      }
+    }
+
     ul#work li section .data {
       max-width: 400px;
 
@@ -170,6 +195,11 @@
       width: 100%;
       text-align: center;
       margin: 0 auto;
+
+      .addthis_toolbox {
+        width: 145px;
+        margin: 0 auto;
+      }
     }
 
     .stream {

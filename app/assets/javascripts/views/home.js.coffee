@@ -2,7 +2,7 @@ class B2plus.Views.Home extends Backbone.View
   el: '#container'
 
   initialize: ->
-    @lazyLoadImages()
+    @lazyLoadImages() if $(window).width() > 801
 
   events: ->
     'click .intro-play-button': 'playIntroVideo'
