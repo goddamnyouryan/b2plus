@@ -31,6 +31,13 @@ class TeamController < ApplicationController
     redirect_to admin_path, notice: 'Team member deleted.'
   end
 
+  def sort
+    params[:team].each_with_index do |id, index|
+      Team.update_all({position: index + 1}, { id: id })
+    end
+    render nothing: true
+  end
+
   private
 
   def find_team

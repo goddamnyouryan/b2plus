@@ -11,6 +11,8 @@ class Work < ActiveRecord::Base
   after_save :create_foreground, if: :foreground?
   after_save :create_thumb, if: :thumb?
 
+  default_scope order('position ASC')
+
   def background?
     self.background.present?
   end

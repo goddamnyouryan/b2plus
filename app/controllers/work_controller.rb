@@ -31,6 +31,13 @@ class WorkController < ApplicationController
     redirect_to admin_path, notice: 'Work deleted.'
   end
 
+  def sort
+    params[:work].each_with_index do |id, index|
+      Work.update_all({position: index + 1}, { id: id })
+    end
+    render nothing: true
+  end
+
   private
 
   def find_work

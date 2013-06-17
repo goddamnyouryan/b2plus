@@ -8,6 +8,8 @@ class Team < ActiveRecord::Base
   after_save :create_thumb, if: :thumb?
   after_save :create_hover, if: :hover?
 
+  default_scope order('position ASC')
+
   def thumb?
     self.thumb.present?
   end
