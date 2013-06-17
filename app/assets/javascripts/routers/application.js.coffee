@@ -14,4 +14,3 @@ class B2plus.Routers.Application extends Backbone.Router
 
   mobile: ->
     new B2plus.Views.Home
-    new B2plus.Views.Work
