@@ -103,10 +103,6 @@
     .stream {
       width: 525px;
     }
-
-    .follow-us {
-      display: none;
-    }
   }
 }
 
@@ -189,6 +185,17 @@
               float: none;
               display: block;
             }
+          }
+        }
+      }
+
+      .color-bar {
+
+        .container {
+          width: 75%;
+
+          &:after {
+            width: 100%;
           }
         }
       }

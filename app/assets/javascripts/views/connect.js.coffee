@@ -5,8 +5,8 @@ class B2plus.Views.Connect extends Backbone.View
   form: JST['contact_form']
 
   initialize: ->
-    @lazyLoadTint() if $(window).width() > 801
-    @lazyLoadAddThis() if $(window).width() > 1000
+    @lazyLoadTint()
+    @lazyLoadAddThis()
 
   events: ->
     'click .address': 'openMap'
