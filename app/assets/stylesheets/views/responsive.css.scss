@@ -31,6 +31,7 @@
     }
 
     header {
+      position: absolute;
 
       .container {
         width: 800px;
@@ -132,12 +133,14 @@
         nav {
           float: none;
           display: block;
-          width: 317px;
+          width: 300px;
           margin: 25px auto -25px;
           padding-bottom: 25px;
           border-bottom: 25px solid $orange;
           position: relative;
           z-index: 2;
+
+          ul li { margin-right: 18px; }
         }
       }
     }
