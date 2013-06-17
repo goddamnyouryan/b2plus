@@ -13,7 +13,7 @@ class B2plus.Views.Home extends Backbone.View
         background = $(this).data('background')
         $(this).css('background', "url('#{background}') no-repeat center")
     ,
-      offset: $.waypoints('viewportHeight')
+      offset: $.waypoints('viewportHeight') + 1000
 
   playIntroVideo: (event) ->
     target = $(event.target)
