@@ -1,0 +1,183 @@
+@media all and (max-width: 1150px) {
+  body {
+
+    header {
+
+      .container {
+        width: 1000px;
+
+        h1 {
+          width: 635px;
+        }
+      }
+    }
+
+    ul#work li section .data {
+      max-width: 650px;
+
+      h2 {
+        @include helvetica(36px);
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1000px) {
+
+  body {
+
+    .container {
+      width: 800px;
+    }
+
+    header {
+
+      .container {
+        width: 800px;
+
+        h1 {
+          width: 480px;
+        }
+      }
+    }
+
+    #intro .container {
+      width: 700px;
+      padding: 0;
+    }
+
+    ul#work li section .data {
+      max-width: 400px;
+
+      h2 {
+        @include helvetica(24px);
+      }
+
+      h3 {
+        @include helvetica(18px);
+      }
+    }
+
+    ul#team li {
+      margin-right: 170px;
+
+      &:nth-child(2n) {
+        margin-right: 0 !important;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 170px;
+      }
+    }
+
+    .stream {
+      width: 525px;
+    }
+  }
+}
+
+@media all and (max-width: 801px) {
+
+  body {
+
+    .container {
+      width: 90%;
+    }
+
+    #container {
+      padding-top: 215px;
+    }
+
+    header {
+
+      .container {
+        width: 100%;
+
+        h1 {
+          width: 100%;
+          border-bottom: none;
+          float: none;
+          display: block;
+
+          a {
+            margin: 0 auto;
+          }
+        }
+
+        nav {
+          float: none;
+          display: block;
+          width: 317px;
+          margin: 25px auto -25px;
+          padding-bottom: 25px;
+          border-bottom: 25px solid $orange;
+          position: relative;
+          z-index: 2;
+        }
+      }
+    }
+
+    #intro .container {
+      width: 80%;
+
+      h1 {
+        @include helvetica(24px);
+      }
+
+      p {
+        @include helvetica(14px);
+      }
+    }
+
+    ul#work {
+
+      li {
+        background: none !important;
+        height: auto;
+
+        section {
+          margin-top: 0;
+          padding: 25px 0;
+
+          .width {
+            width: 308px;
+
+            img {
+              float: none;
+              display: block;
+            }
+
+            .data {
+              float: none;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    ul#team li {
+      float: none;
+      display: block;
+      margin: 0 auto !important;
+
+      &:nth-child(2n), &:nth-child(3n) {
+        margin-right: auto !important;
+      }
+    }
+
+    .contact {
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .stream {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+}
