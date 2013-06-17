@@ -1,4 +1,9 @@
 @media all and (max-width: 1150px) {
+  body, html, #container {
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
   body {
 
     header {
@@ -114,6 +119,8 @@
     }
 
     #container {
+      -webkit-overflow-scrolling: touch;
+      height: 100%;
       padding-top: 215px;
     }
 
