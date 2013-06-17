@@ -31,7 +31,6 @@
     }
 
     header {
-      position: absolute;
 
       .container {
         width: 800px;
@@ -98,6 +97,10 @@
 
     .stream {
       width: 525px;
+    }
+
+    .follow-us {
+      display: none;
     }
   }
 }
