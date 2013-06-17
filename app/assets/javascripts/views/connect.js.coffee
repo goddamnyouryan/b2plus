@@ -6,6 +6,7 @@ class B2plus.Views.Connect extends Backbone.View
 
   initialize: ->
     @lazyLoadTint() if $(window).width() > 801
+    @lazyLoadAddThis() if $(window).width() > 1000
 
   events: ->
     'click .address': 'openMap'
@@ -15,6 +16,12 @@ class B2plus.Views.Connect extends Backbone.View
   lazyLoadTint: ->
     $('#connect').waypoint ->
       $.getScript('http://d36hc0p18k1aoc.cloudfront.net/public/js/modules/tintembed.js')
+    ,
+      offset: $.waypoints('viewportHeight')
+
+  lazyLoadAddThis: ->
+    $('.follow-us').waypoint ->
+      $.getScript('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51a8d7ad01bacb80')
     ,
       offset: $.waypoints('viewportHeight')
 
