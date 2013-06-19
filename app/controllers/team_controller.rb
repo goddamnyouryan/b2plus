@@ -1,5 +1,6 @@
 class TeamController < ApplicationController
   before_filter :find_team, only: [:edit, :update, :destroy]
+  before_filter :password_protect
 
   def new
     @team = Team.new

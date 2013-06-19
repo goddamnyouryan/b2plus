@@ -1,5 +1,6 @@
 class WorkController < ApplicationController
   before_filter :find_work, only: [:edit, :update, :destroy]
+  before_filter :password_protect
 
   def new
     @work = Work.new

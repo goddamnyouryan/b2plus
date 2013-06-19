@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+  before_filter :password_protect, only: [:edit, :update, :admin]
+
   def index
     @home = Home.first
     @work = Work.order('position asc')
