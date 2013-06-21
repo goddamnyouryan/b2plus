@@ -50,9 +50,10 @@
   margin: 100px 0 200px;
 
   a.scroll {
-    background: image-url('down-arrow.png') no-repeat;
-    width: image-width('down-arrow.png');
-    height: image-height('down-arrow.png');
+    background: image-url('/svg/down-arrow.svg') no-repeat;
+    background-size: 67px 84px;
+    width: 67px;
+    height: 84px;
     text-indent: -9999px;
     display: block;
     margin: 0 auto;

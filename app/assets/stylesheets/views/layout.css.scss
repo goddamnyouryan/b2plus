@@ -51,9 +51,10 @@ body {
         width: 700px;
 
         a {
-          background: image-url('logo.png') no-repeat;
-          width: image-width('logo.png');
-          height: image-height('logo.png');
+          background: image-url('/svg/logo.svg') no-repeat;
+          background-size: 326px 41px;
+          width: 326px;
+          height: 41px;
           display: block;
           text-indent: -9999px;
         }
@@ -64,7 +65,7 @@ body {
         margin-top: 55px;
 
         ul {
-          @include clearfix;
+          @include pie-clearfix;
 
           li {
             @include float-left;

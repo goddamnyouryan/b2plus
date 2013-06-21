@@ -52,7 +52,7 @@
     }
 
     .video#video {
-      width: auto;
+      width: 80%;
     }
 
     .overlay .overlay-content {
@@ -76,8 +76,11 @@
       }
     }
 
+    .arrow {
+      margin: 100px 0;
+    }
+
     ul#work li section .data {
-      max-width: 400px;
 
       h2 {
         @include helvetica(24px);
@@ -111,16 +114,17 @@
   body {
 
     .container {
-      width: 90%;
+      width: 80%;
     }
 
     #container {
       -webkit-overflow-scrolling: touch;
       height: 100%;
-      padding-top: 215px;
+      padding-top: 250px;
     }
 
     header {
+      position: absolute;
 
       .container {
         width: 100%;
@@ -132,6 +136,9 @@
           display: block;
 
           a {
+            width: 80%;
+            height: 79px;
+            background-size: 100% auto;
             margin: 0 auto;
           }
         }
@@ -139,14 +146,33 @@
         nav {
           float: none;
           display: block;
-          width: 300px;
+          width: 80%;
           margin: 25px auto -25px;
           padding-bottom: 25px;
           border-bottom: 25px solid $orange;
           position: relative;
           z-index: 2;
 
-          ul li { margin-right: 18px; }
+          ul {
+
+            li {
+              margin-right: 0;
+
+              &:first-child {
+                width: 20%;
+              }
+
+              &:nth-child(2), &:nth-child(3) {
+                text-align: center;
+                width: 27%;
+              }
+
+              &:last-child {
+                text-align: right;
+                width: 26%;
+              }
+            }
+          }
         }
       }
     }
@@ -163,6 +189,10 @@
       }
     }
 
+    .video#video {
+      width: 100%;
+    }
+
     ul#work {
 
       li {
@@ -174,16 +204,28 @@
           padding: 25px 0;
 
           .width {
-            width: 308px;
+            width: 80%;
+
+            &:before {
+              width: 100%;
+              text-align: center;
+              left: 0;
+              top: 30%;
+            }
 
             img {
               float: none;
               display: block;
+              width: 100%;
             }
 
             .data {
               float: none;
               display: block;
+
+              h3 {
+                @include helvetica(14px);
+              }
             }
           }
         }
@@ -192,7 +234,7 @@
       .color-bar {
 
         .container {
-          width: 75%;
+          width: 80%;
 
           &:after {
             width: 100%;
@@ -205,9 +247,20 @@
       float: none;
       display: block;
       margin: 0 auto !important;
+      width: 100%;
+      text-align: center;
 
       &:nth-child(2n), &:nth-child(3n) {
         margin-right: auto !important;
+      }
+
+      img.hover {
+        left: 25%;
+      }
+
+      .about {
+        font-size: 14px;
+        width: 89%;
       }
     }
 
@@ -230,4 +283,29 @@
 
 @media screen and (max-width: 480px) {
 
+  body {
+
+    header .container {
+
+      h1 a {
+        height: 48px;
+      }
+
+      nav ul {
+
+        li {
+
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    ul#team li img.hover { left: 0; }
+
+    ul#work li section .width:before {
+      top: 10%;
+    }
+  }
 }
