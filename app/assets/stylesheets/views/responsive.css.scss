@@ -259,7 +259,7 @@
       }
 
       .about {
-        font-size: 14px;
+        text-align: left;
         width: 89%;
       }
     }
@@ -291,12 +291,16 @@
         height: 48px;
       }
 
-      nav ul {
+      nav {
+        margin-top: 0;
 
-        li {
+        ul {
 
-          a {
-            font-size: 14px;
+          li {
+
+            a {
+              font-size: 14px;
+            }
           }
         }
       }
@@ -306,6 +310,16 @@
 
     ul#work li section .width:before {
       top: 10%;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+  body {
+
+    header .container h1 a {
+      height: 32px;
     }
   }
 }
