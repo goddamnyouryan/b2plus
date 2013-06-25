@@ -306,6 +306,11 @@
       }
     }
 
+    #container {
+      padding-top: 200px;
+    }
+
+
     ul#team li img.hover { left: 0; }
 
     ul#work li section .width:before {
@@ -330,6 +335,10 @@
           height: 32px;
         }
       }
+    }
+
+    #container {
+      padding-top: 175px;
     }
   }
 }
