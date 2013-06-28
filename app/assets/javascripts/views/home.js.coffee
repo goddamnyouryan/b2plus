@@ -11,7 +11,7 @@ class B2plus.Views.Home extends Backbone.View
     $('ul#work li').waypoint ->
       if $(this).css('background-image') == 'none'
         background = $(this).data('background')
-        $(this).css('background', "url('#{background}') no-repeat center")
+        $(this).css('background', "url('#{background}') no-repeat 50% -380px")
     ,
       offset: $.waypoints('viewportHeight') + 1000
 

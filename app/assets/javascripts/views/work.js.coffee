@@ -5,6 +5,9 @@ class B2plus.Views.Work extends Backbone.View
 
   initialize: ->
     sublime.load()
+    if $(window).width() > 801
+      skrollr.init
+        smoothScrolling: true
 
   events: ->
     'click img.thumb': 'playVideoInOverlay'
