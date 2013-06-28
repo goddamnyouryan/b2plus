@@ -14,7 +14,7 @@ ul#work
   .color-bar
     .container
   - @work.each do |work|
-    li data-background="#{work.background_image}"
+    li data-background="#{work.background_image} no-repeat" data-500-top='background-position: 50% 0px' data--400-bottom='background-position: 50% -200px'
       section
         .width
           img.thumb src="#{work.thumb_image}" data-mp4="#{work.mp4}" data-ogg="#{work.ogg}" data-thumb="#{work.thumb_image}"
