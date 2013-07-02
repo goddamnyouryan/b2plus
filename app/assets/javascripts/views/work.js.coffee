@@ -5,7 +5,7 @@ class B2plus.Views.Work extends Backbone.View
 
   initialize: ->
     sublime.load()
-    if $(window).width() > 801
+    if $(window).width() > 801 and @deviceNotMobile()
       skrollr.init
         smoothScrolling: true
 
@@ -34,3 +34,6 @@ class B2plus.Views.Work extends Backbone.View
 
   triggerOverlay: (event) ->
     $(event.target).find('img.thumb').click()
+
+  deviceNotMobile: ->
+    !(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)
