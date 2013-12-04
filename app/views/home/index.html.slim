@@ -1,12 +1,12 @@
-#intro
-  .container
-    h1 = @home.title
-    p = @home.intro
-
 .video#video
   video class='sublime' title='Intro Video' width='900' height='506' poster="#{@home.poster}" preload='none' id='intro-video' data-controls-enable='true' data-initial-overlay-enable='false'
     source src="#{@home.mp4}"
     source src="#{@home.ogg}"
+
+#intro
+  .container
+    h1 = @home.title
+    p = @home.intro
 
 .arrow = link_to 'Scroll Down', '#work', class: 'scroll'
 
@@ -43,6 +43,16 @@ ul#work
 #connect
   .container
     .contact
+      p.address
+        ' Sales/Business Development Inquiries:
+        br
+        ' Lori Pate
+        br
+        = link_to 'lori@loripateplus.com', 'mailto:lori@loripateplus.com'
+        br
+        ' T: 212.289.0075
+
+
       p.address
         ' 5543 Riverton Ave. Suite 4
         br
