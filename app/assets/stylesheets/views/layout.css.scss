@@ -51,10 +51,12 @@ body {
         width: 700px;
 
         a {
+          $width: 326px;
+          $height: 46px;
           background: image-url('/svg/logo.svg') no-repeat;
-          background-size: 326px 41px;
-          width: 326px;
-          height: 41px;
+          background-size: $width $height;
+          width: $width;
+          height: $height;
           display: block;
           text-indent: -9999px;
         }
