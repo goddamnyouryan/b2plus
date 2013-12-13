@@ -3,6 +3,7 @@ class B2plus.Routers.Application extends Backbone.Router
   routes:
     '' : 'index'
     'admin': 'admin'
+    ':id': 'scrollTo'
 
   initialize: ->
     new B2plus.Views.Global
@@ -14,3 +15,8 @@ class B2plus.Routers.Application extends Backbone.Router
 
   admin: ->
     new B2plus.Views.Admin
+
+  scrollTo: (id) ->
+    @index()
+    work = $("##{id}").offset().top
+    $('body').scrollTop work

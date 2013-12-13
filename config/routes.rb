@@ -9,5 +9,7 @@ B2plus::Application.routes.draw do
   get '/admin', to: 'home#admin'
   post '/contact', to: 'home#contact'
 
+  get ':id', to: 'home#index'
+
   root to: 'home#index'
 end
