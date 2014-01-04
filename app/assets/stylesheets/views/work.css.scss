@@ -58,31 +58,4 @@ ul#work {
       }
     }
   }
-
-  .color-bar {
-    border-bottom: 25px solid $red;
-    width: 100%;
-    position: relative;
-
-    &:after {
-      content: '';
-      border-bottom: 25px solid $yellow;
-      position: absolute;
-      width: 50%;
-      right: 0;
-      z-index: 1;
-    }
-
-    .container {
-      position: relative;
-      z-index: 2;
-
-      &:after {
-        content: '';
-        border-bottom: 25px solid $orange;
-        position: absolute;
-        width: 700px;
-      }
-    }
-  }
 }

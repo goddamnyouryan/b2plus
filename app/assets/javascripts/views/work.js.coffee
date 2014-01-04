@@ -1,5 +1,4 @@
 class B2plus.Views.Work extends Backbone.View
-  el: '#work'
 
   template: JST['video']
 
@@ -12,6 +11,7 @@ class B2plus.Views.Work extends Backbone.View
   events: ->
     'click img.thumb': 'playVideoInOverlay'
     'click .width': 'triggerOverlay'
+    'click h2.title': 'triggerSiblingOverlay'
 
   playVideoInOverlay: (event) ->
     target = $(event.target)
@@ -34,6 +34,9 @@ class B2plus.Views.Work extends Backbone.View
 
   triggerOverlay: (event) ->
     $(event.target).find('img.thumb').click()
+
+  triggerSiblingOverlay: (event) ->
+    $(event.target).siblings('img.thumb').click()
 
   deviceNotMobile: ->
     !(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)

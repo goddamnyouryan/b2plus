@@ -24,61 +24,72 @@ ul#work
     .color-bar
       .container
 
-.arrow = link_to 'Scroll Down', '#team', class: 'scroll'
+- if @archived.present?
+  ul#archive
+    .container
+      - @archived.each do |work|
+        li.width
+          img.thumb src="#{work.thumb_image}" data-mp4="#{work.mp4}" data-ogg="#{work.ogg}" data-thumb="#{work.thumb_image}"
+          h2.title = work.title
 
-.container
-  ul#team
-    - @teams.each do |team|
-      li
-        = image_tag team.thumb_image, class: 'thumb'
-        = image_tag team.hover_image, class: 'hover'
-        .meta
-          h2 = team.name
-          h3 = team.title
-        .about
-          .content = team.body.html_safe
+  .color-bar
+    .container
 
-.arrow = link_to 'Scroll Down', '#connect', class: 'scroll'
+  .arrow = link_to 'Scroll Down', '#team', class: 'scroll'
+
+  .container
+    ul#team
+      - @teams.each do |team|
+        li
+          = image_tag team.thumb_image, class: 'thumb'
+          = image_tag team.hover_image, class: 'hover'
+          .meta
+            h2 = team.name
+            h3 = team.title
+          .about
+            .content = team.body.html_safe
+
+  .arrow = link_to 'Scroll Down', '#connect', class: 'scroll'
 
 #connect
-  .container
-    .contact
-      p.address
-        ' Sales/Business Development Inquiries:
-        br
-        ' Lori Pate
-        br
-        ' LORI PATE+
-        br
-        = link_to 'lori@loripateplus.com', 'mailto:lori@loripateplus.com'
-        br
-        ' 212.289.0075 / NYC Office
-        br
-        ' 303.829.8432 / Mobile
+    .container
+      .contact
+        p.address
+          ' Sales/Business Development Inquiries:
+          br
+          ' Lori Pate
+          br
+          ' LORI PATE+
+          br
+          = link_to 'lori@loripateplus.com', 'mailto:lori@loripateplus.com'
+          br
+          ' 212.289.0075 / NYC Office
+          br
+          ' 303.829.8432 / Mobile
 
 
-      p.address
-        ' 5543 Riverton Ave. Suite 4
-        br
-        ' North Hollywood, CA 91601
+        p.address
+          ' 5543 Riverton Ave. Suite 4
+          br
+          ' North Hollywood, CA 91601
 
-      p
-        ' T: 818.985.9500
-        br
-        ' F: 818.985.9501
+        p
+          ' T: 818.985.9500
+          br
+          ' F: 818.985.9501
 
-      p = link_to 'info@B2plus.tv', 'mailto:info@B2plus.tv', class: 'contact-form'
+        p = link_to 'info@B2plus.tv', 'mailto:info@B2plus.tv', class: 'contact-form'
+
+        .follow-us
+          p.follow Follow Us
+          div class='addthis_toolbox addthis_default_style addthis_32x32_style'
+            a class='addthis_button_facebook_follow' addthis:userid='pages/B2-The-Broadcast-Branded-Entertainment-Agency/312142908892286'
+            a class='addthis_button_twitter_follow' addthis:userid='B2plusTV'
+            a class='addthis_button_youtube_follow' addthis:userid='B2PlusTV'
+            a class='addthis_button_instagram_follow' addthis:userid='b2plustv'
 
       .follow-us
-        p.follow Follow Us
-        div class='addthis_toolbox addthis_default_style addthis_32x32_style'
-          a class='addthis_button_facebook_follow' addthis:userid='pages/B2-The-Broadcast-Branded-Entertainment-Agency/312142908892286'
-          a class='addthis_button_twitter_follow' addthis:userid='B2plusTV'
-          a class='addthis_button_youtube_follow' addthis:userid='B2PlusTV'
-          a class='addthis_button_instagram_follow' addthis:userid='b2plustv'
-
-    .follow-us
-      .stream
-        h2 #b2plustv
-        .tintup data-id='b2plus' data-columns='3' style='height:800px;width:100%;'
-          .tintup-inner
+        .stream
+          h2 #b2plustv
+          .tintup data-id='b2plus' data-columns='3' style='height:800px;width:100%;'
+            .tintup-inner

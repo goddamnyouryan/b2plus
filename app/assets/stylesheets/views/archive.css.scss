@@ -1,0 +1,51 @@
+ul#archive {
+  @include clearfix;
+  margin: 100px 0;
+
+  .container { width: 942px; }
+
+  li {
+    @include float-left;
+    margin: 0 15px 15px 0;
+    position: relative;
+
+    &:nth-child(3n) {
+      margin: 0 0 15px 0;
+    }
+
+    &:before {
+      $image: 'play.png';
+      content: image-url($image);
+      width: image-width($image);
+      height: image-height($image);
+      position: absolute;
+      left: 107px;
+      top: 51px;
+      cursor: pointer;
+    }
+
+    &:hover h2.title {
+      @include single-transition(opacity, 0.2s, ease-in-out);
+      opacity: 1;
+    }
+
+    img {
+      border: 2px solid $gray;
+      cursor: pointer;
+    }
+
+    h2.title {
+      opacity: 0;
+      @include helvetica(36px);
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      background: rgba($orange, 0.8);
+      color: $white;
+      padding: 20px;
+      width: 260px;
+      height: 160px;
+      cursor: pointer;
+    }
+  }
+}

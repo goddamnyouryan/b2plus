@@ -11,7 +11,8 @@ class B2plus.Routers.Application extends Backbone.Router
   index: ->
     new B2plus.Views.Home
     new B2plus.Views.Connect
-    new B2plus.Views.Work
+    new B2plus.Views.Work el: '#work'
+    new B2plus.Views.Work el: '#archive'
 
   admin: ->
     new B2plus.Views.Admin
