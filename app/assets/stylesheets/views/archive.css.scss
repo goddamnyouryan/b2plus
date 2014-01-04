@@ -49,3 +49,15 @@ ul#archive {
     }
   }
 }
+
+h2.archive {
+  @include helvetica(36px);
+  color: $orange;
+  cursor: pointer;
+  margin: 50px 0;
+  display: none;
+
+  &:hover {
+    color: $red;
+  }
+}

@@ -25,6 +25,8 @@ ul#work
       .container
 
 - if @archived.present?
+  .container.mobile
+    h2.archive Archive
   ul#archive
     .container
       - @archived.each do |work|
