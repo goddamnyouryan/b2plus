@@ -1,6 +1,6 @@
 class Work < ActiveRecord::Base
   attr_accessible :description, :mp4, :ogg, :position, :title,
-                  :background, :middle, :foreground, :thumb
+                  :background, :middle, :foreground, :thumb, :archive
 
   attr_accessor :background, :middle, :foreground, :thumb
 
@@ -12,6 +12,9 @@ class Work < ActiveRecord::Base
   after_save :create_thumb, if: :thumb?
 
   default_scope order('position ASC')
+
+  scope :active, -> { where(archive: false) }
+  scope :archived, -> { where(archive: true) }
 
   def background?
     self.background.present?

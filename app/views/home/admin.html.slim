@@ -12,7 +12,19 @@
       = content_tag_for :li, work do
         =' work.title
         =' link_to 'Edit', edit_work_path(work)
+        =' link_to 'Move to Archive', work_path(work, work: {archive: true}), method: :put
         = link_to 'Delete', work, method: :delete, confirm: 'Are you sure you want to delete this?'
+
+  - if @archived.present?
+    h2 Archives (drag to reorder)
+    ul.sort data-update-url="#{sort_work_index_url}"
+      - @archived.each do |work|
+        = content_tag_for :li, work do
+          =' work.title
+          =' link_to 'Edit', edit_work_path(work)
+          =' link_to 'Move to Active', work_path(work, work: {archive: false}), method: :put
+          = link_to 'Delete', work, method: :delete, confirm: 'Are you sure you want to delete this?'
+
 
   h2 Team
   ul.sort data-update-url="#{sort_team_index_url}"

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130617171320) do
+ActiveRecord::Schema.define(:version => 20140104020134) do
 
   create_table "homes", :force => true do |t|
     t.text     "intro"
@@ -50,8 +50,9 @@ ActiveRecord::Schema.define(:version => 20130617171320) do
     t.integer  "position"
     t.string   "mp4"
     t.string   "ogg"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+    t.boolean  "archive",     :default => false, :null => false
   end
 
 end

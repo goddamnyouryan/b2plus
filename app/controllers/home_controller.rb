@@ -3,12 +3,14 @@ class HomeController < ApplicationController
 
   def index
     @home = Home.first
-    @work = Work.order('position asc')
+    @work = Work.active
+    @archived = Work.archived
     @teams = Team.all
   end
 
   def admin
-    @work = Work.all
+    @work = Work.active
+    @archived = Work.archived
     @team = Team.all
     @home = Home.first
   end
