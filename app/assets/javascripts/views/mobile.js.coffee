@@ -4,7 +4,7 @@ class B2plus.Views.Mobile extends Backbone.View
     'click h2.archive': 'toggleArchive'
 
   archive: ->
-    @$('ul#archive')
+    @$('#archive ul')
 
   toggleArchive: ->
     if @archive().is ':visible'

@@ -111,9 +111,12 @@
 
 @media all and (max-width: 950px) {
 
-  ul#archive {
-    display: none;
-    margin: 0 auto;
+  #archive {
+
+    ul {
+      display: none;
+      margin: 0 auto;
+    }
 
     .container {
       width: 80%;
@@ -147,10 +150,6 @@
         color: $gray;
       }
     }
-  }
-
-  h2.archive {
-    display: block;
   }
 }
 

@@ -25,14 +25,14 @@ ul#work
       .container
 
 - if @archived.present?
-  .container.mobile
-    h2.archive Archive
-  ul#archive
+  #archive
     .container
-      - @archived.each do |work|
-        li.width
-          img.thumb src="#{work.thumb_image}" data-mp4="#{work.mp4}" data-ogg="#{work.ogg}" data-thumb="#{work.thumb_image}"
-          h2.title = work.title
+      h2.archive Archive
+      ul
+        - @archived.each do |work|
+          li.width
+            img.thumb src="#{work.thumb_image}" data-mp4="#{work.mp4}" data-ogg="#{work.ogg}" data-thumb="#{work.thumb_image}"
+            h2.title = work.title
 
   .color-bar
     .container

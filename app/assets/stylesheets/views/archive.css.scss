@@ -1,6 +1,9 @@
-ul#archive {
-  @include clearfix;
-  margin: 100px 0;
+#archive {
+
+  ul {
+    @include clearfix;
+    margin: 0 0 100px;
+  }
 
   .container { width: 942px; }
 
@@ -55,7 +58,6 @@ h2.archive {
   color: $orange;
   cursor: pointer;
   margin: 50px 0;
-  display: none;
 
   &:hover {
     color: $red;
