@@ -113,6 +113,17 @@
 
   #archive {
 
+    .color-bar {
+
+      .container {
+        width: 80%;
+
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+
     ul {
       display: none;
       margin: 0 auto;
