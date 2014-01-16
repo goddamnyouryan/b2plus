@@ -12,12 +12,16 @@ class B2plus.Views.Global extends Backbone.View
     event.preventDefault()
     target = $(event.target)
     hash = target.attr('href')
-    if hash == '#work'
-      offset = 111
-    else
-      offset = 136
-    scrollTarget = $("#{hash}").offset().top - offset
+    scrollTarget = $("#{hash}").offset().top - @offset(hash)
     $('html,body').animate({scrollTop: scrollTarget},{easing: 'linear', duration: 1000})
+
+  offset: (hash) ->
+    if $(window).width() < 1000
+      0
+    else if hash == '#work'
+      111
+    else
+      136
 
   makeSublimeFluid: ->
     $(window).resize =>
