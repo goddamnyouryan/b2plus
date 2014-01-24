@@ -1,6 +1,7 @@
 //= require jquery
 //= require jquery-ui
 //= require jquery_ujs
+//= require modernizr
 //= require waypoints.min
 //= require skrollr
 //= require skrollr.ie

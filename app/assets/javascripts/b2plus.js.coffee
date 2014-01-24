@@ -5,7 +5,7 @@ window.B2plus =
   Routers: {}
   initialize: ->
     new B2plus.Routers.Application
-    Backbone.history.start( pushState: true )
+    Backbone.history.start pushState: Modernizr.history
 
 $(document).ready ->
   B2plus.initialize()
