@@ -21,4 +21,6 @@ class B2plus.Routers.Application extends Backbone.Router
   scrollTo: (id) ->
     @index()
     work = $("##{id}").offset().top
+    if /webkit.*mobile/i.test(navigator.userAgent)
+      work = work - $(window).scrollTop()
     $('body').scrollTop work
