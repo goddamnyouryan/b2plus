@@ -117,4 +117,28 @@ body {
       }
     }
   }
+
+  a.master-arrow {
+    @include single-transition(transform, 0.2s, ease-in-out);
+    $dimension: 71px;
+    $position: 20px;
+    background: url('down.svg') no-repeat;
+    display: block;
+    text-indent: -9999px;
+    width: $dimension;
+    height: $dimension;
+    position: fixed;
+    bottom: $position;
+    right: $position;
+    cursor: pointer;
+    z-index: 100;
+
+    &:hover {
+      background: url('down-hover.svg') no-repeat;
+    }
+
+    &.top {
+      @include rotate(180deg);
+    }
+  }
 }

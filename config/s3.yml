@@ -1,5 +1,5 @@
 development:
-  bucket: b2plus_development
+  bucket: b2plus_production
   access_key_id: AKIAJ2VXOJBAKFYA6H4Q
   secret_access_key: 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
 
