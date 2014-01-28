@@ -1,4 +1,4 @@
-= link_to 'Down', nil, class: 'down master-arrow'
+= link_to 'Down', nil, class: 'down arrow'
 
 .video#video
   video class='sublime' title='Intro Video' width='900' height='506' poster="#{@home.poster}" preload='none' id='intro-video' data-controls-enable='true' data-initial-overlay-enable='false'
@@ -9,8 +9,6 @@
   .container
     h1 = @home.title
     p = @home.intro
-
-.arrow = link_to 'Scroll Down', '#work', class: 'scroll'
 
 ul#work
   .color-bar
@@ -39,8 +37,6 @@ ul#work
     .color-bar
       .container
 
-  .arrow = link_to 'Scroll Down', '#team', class: 'scroll'
-
   .container
     ul#team
       - @teams.each do |team|
@@ -52,8 +48,6 @@ ul#work
             h3 = team.title
           .about
             .content = team.body.html_safe
-
-  .arrow = link_to 'Scroll Down', '#connect', class: 'scroll'
 
 #connect
     .container

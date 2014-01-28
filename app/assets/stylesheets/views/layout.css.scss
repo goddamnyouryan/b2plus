@@ -118,7 +118,7 @@ body {
     }
   }
 
-  a.master-arrow {
+  a.arrow {
     @include single-transition(transform, 0.2s, ease-in-out);
     $dimension: 71px;
     $position: 20px;

@@ -1,5 +1,6 @@
 #intro {
   position: relative;
+  margin-bottom: 100px;
 
   .container {
     padding: 100px 100px 0 100px;
@@ -42,21 +43,6 @@
   }
 
   #intro-video {
-  }
-}
-
-.arrow {
-  text-align: center;
-  margin: 100px 0 200px;
-
-  a.scroll {
-    background: image-url('/svg/down-arrow.svg') no-repeat;
-    background-size: 67px 84px;
-    width: 67px;
-    height: 84px;
-    text-indent: -9999px;
-    display: block;
-    margin: 0 auto;
   }
 }
 

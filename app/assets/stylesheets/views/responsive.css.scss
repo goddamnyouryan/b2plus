@@ -14,6 +14,8 @@
         h1 {
           width: 635px;
         }
+
+        nav ul li:nth-child(3) { display: none; }
       }
     }
 
@@ -30,6 +32,8 @@
 @media all and (max-width: 1000px) {
 
   body {
+
+    a.arrow { bottom: -80px; }
 
     .container {
       width: 800px;
@@ -171,6 +175,8 @@
     .container {
       width: 80%;
     }
+
+    a.arrow { display: none; }
 
     #container {
       -webkit-overflow-scrolling: touch;
