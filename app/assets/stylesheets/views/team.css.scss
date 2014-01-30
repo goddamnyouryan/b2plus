@@ -1,5 +1,6 @@
 ul#team {
   @include clearfix;
+  padding-top: 100px;
 
   li {
     @include float-left;
