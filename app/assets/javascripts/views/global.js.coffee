@@ -2,8 +2,8 @@ class B2plus.Views.Global extends Backbone.View
   el: 'body'
 
   initialize: ->
-    @makeSublimeFluid() if $(window).width() < 1000
-    @resizeSublime() if $(window).width() < 1000
+    # @makeSublimeFluid() if $(window).width() < 1000
+    # @resizeSublime() if $(window).width() < 1000
 
   events: ->
     'click .scroll': 'smoothScroll'
