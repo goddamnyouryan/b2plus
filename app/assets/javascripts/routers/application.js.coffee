@@ -20,7 +20,10 @@ class B2plus.Routers.Application extends Backbone.Router
 
   scrollTo: (id) ->
     @index()
-    work = $("##{id}").offset().top
-    if /webkit.*mobile/i.test(navigator.userAgent)
-      work = work - $(window).scrollTop()
-    $('body').scrollTop work
+    sublime.ready =>
+      work = $("##{id}").offset().top
+      if /webkit.*mobile/i.test(navigator.userAgent)
+        work = work - $(window).scrollTop() + $('#video').outerHeight()
+      else
+        work = work - $('header').outerHeight()
+      $('body').scrollTop work
