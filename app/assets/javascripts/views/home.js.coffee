@@ -52,7 +52,7 @@ class B2plus.Views.Home extends Backbone.View
     $('header').outerHeight()
 
   nextDistance: ->
-    @next - @topOffset()
+    @next - @topOffset() + 1
 
   scrollableElements: ->
     $('#intro, ul#work li, #archive, ul#team, #connect')
