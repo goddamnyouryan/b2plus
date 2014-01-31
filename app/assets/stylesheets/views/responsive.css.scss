@@ -133,6 +133,7 @@
     ul {
       display: none;
       margin: 0 auto;
+      width: auto;
     }
 
     .container {
@@ -166,6 +167,8 @@
         background: transparent;
         color: $gray;
       }
+
+      &:hover h2.title { opacity: 1; }
     }
   }
 }
