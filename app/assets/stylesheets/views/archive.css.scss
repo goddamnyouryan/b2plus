@@ -2,10 +2,9 @@
 
   ul {
     @include clearfix;
-    margin: 0 0 100px;
+    margin: 0 auto 100px;
+    width: 942px;
   }
-
-  .container { width: 942px; }
 
   li {
     @include float-left;
@@ -57,7 +56,8 @@ h2.archive {
   @include helvetica(36px);
   color: $orange;
   cursor: pointer;
-  margin: 50px 0;
+  margin: 50px auto;
+  width: 942px;
 
   &:hover {
     color: $red;

@@ -3,20 +3,17 @@ ul#work {
   li {
     height: 700px;
     overflow: hidden;
-    width: 100%;
     position: relative;
     background-repeat: no-repeat;
 
     section {
       @include clearfix;
       background: rgba($white, 0.85);
-      width: 100%;
       padding: 25px 50px;
       margin-top: 200px;
       position: relative;
 
       .width {
-        width: 1240px;
         margin: 0 auto;
         position: relative;
 
@@ -33,15 +30,14 @@ ul#work {
       }
 
       img {
-        @include float-left;
+        float: left;
         margin-right: 25px;
         border: 2px solid $gray;
         cursor: pointer;
       }
 
       .data {
-        @include float-left;
-        max-width: 800px;
+        overflow: hidden;
 
         h2 {
           font-size: 48px;

@@ -55,4 +55,4 @@ class B2plus.Views.Home extends Backbone.View
     @next - @topOffset()
 
   scrollableElements: ->
-    $('ul#work li, #archive, ul#team, #connect')
+    $('#intro, ul#work li, #archive, ul#team, #connect')
