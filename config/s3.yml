@@ -1,14 +1,14 @@
 development:
   bucket: b2plus_production
-  access_key_id: AKIAJT6W4XQJGYDJ6BGQ
+  access_key_id: AKIAJTTWXS4V7XVFJN6Q
   secret_access_key: <%= ENV['GODDAMNYOURYAN_S3_SECRET_ACCESS_KEY'] %>
 
 test:
   bucket: myapptest
-  access_key_id: AKIAJT6W4XQJGYDJ6BGQ
+  access_key_id: AKIAJTTWXS4V7XVFJN6Q
   secret_access_key: <%= ENV['GODDAMNYOURYAN_S3_SECRET_ACCESS_KEY'] %>
 
 production:
   bucket: b2plus_production
-  access_key_id: AKIAJT6W4XQJGYDJ6BGQ
+  access_key_id: AKIAJTTWXS4V7XVFJN6Q
   secret_access_key: <%= ENV['GODDAMNYOURYAN_S3_SECRET_ACCESS_KEY'] %>
