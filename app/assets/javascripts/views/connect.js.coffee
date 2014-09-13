@@ -5,7 +5,7 @@ class B2plus.Views.Connect extends Backbone.View
   form: JST['contact_form']
 
   initialize: ->
-    @lazyLoadTint()
+    #@lazyLoadTint()
     @lazyLoadAddThis()
 
   events: ->
