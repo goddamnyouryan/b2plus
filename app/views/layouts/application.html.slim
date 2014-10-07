@@ -14,7 +14,6 @@ html
     meta property='og:image' content="#{image_url('logo.png')}"  name='thumb'
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag '//cdn.sublimevideo.net/js/q5tmhjc8.js'
-    = javascript_include_tag 'application'
     = csrf_meta_tags
     /[if lt IE 9]
       = javascript_include_tag '/javascripts/html5shiv.js'
@@ -42,3 +41,4 @@ html
 
     #container
       = yield
+      = javascript_include_tag 'application'
