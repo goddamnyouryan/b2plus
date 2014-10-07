@@ -1,5 +1,5 @@
 //= require jquery
-//= require jquery-ui
+//= require jquery.ui.sortable
 //= require jquery_ujs
 //= require modernizr
 //= require waypoints.min
