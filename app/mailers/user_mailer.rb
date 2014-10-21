@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: 'no-reply@b2plus.com'
+  default from: 'no-reply@b2plus.tv'
   layout 'email'
 
   def contact_form(params)
